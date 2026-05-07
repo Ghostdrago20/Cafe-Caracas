@@ -1,0 +1,44 @@
+<ion-header [translucent]="true" class="ion-no-border">
+  <ion-toolbar color="dark">
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="/tabs/inicio" text="Volver"></ion-back-button>
+    </ion-buttons>
+    <ion-title>Menú</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true" class="ion-padding">
+  
+  <div class="categories-scroll">
+    <div 
+      class="category-chip" 
+      *ngFor="let cat of categories" 
+      [class.active]="selectedCategory === cat.name"
+      (click)="selectCategory(cat.name)">
+      <ion-icon [name]="cat.icon"></ion-icon>
+      <span>{{ cat.name }}</span>
+    </div>
+  </div>
+
+  <h2 class="category-title">{{ selectedCategory }}</h2>
+
+  <ion-list class="menu-list" lines="none">
+    <ion-item class="menu-item" *ngFor="let item of currentItems">
+      <ion-thumbnail slot="start">
+        <img [src]="item.image" [alt]="item.name" />
+      </ion-thumbnail>
+      <ion-label class="ion-text-wrap">
+        <div class="item-header">
+          <h3>{{ item.name }}</h3>
+          <span class="price">{{ item.price }}</span>
+        </div>
+        <p>{{ item.description }}</p>
+      </ion-label>
+    </ion-item>
+  </ion-list>
+  
+  <div class="empty-state" *ngIf="currentItems.length === 0">
+    <p>No hay productos disponibles en esta categoría.</p>
+  </div>
+
+</ion-content>

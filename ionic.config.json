@@ -1,0 +1,7 @@
+{
+  "name": "Café-Caracas",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}

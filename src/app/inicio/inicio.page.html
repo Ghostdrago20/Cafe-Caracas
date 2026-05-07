@@ -1,0 +1,30 @@
+<ion-header [translucent]="true" class="ion-no-border">
+  <ion-toolbar color="dark">
+    <ion-title class="ion-text-center">Café Caracas</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <div class="hero-container">
+    <img src="assets/images/cafe_hero.png" alt="Café Caracas Interior" class="hero-image" />
+    <div class="hero-overlay">
+      <h1>Café Caracas</h1>
+      <p>El arte del café, perfeccionado para ti.</p>
+      <ion-button color="tertiary" shape="round" routerLink="/menu">Descubre Nuestro Menú</ion-button>
+    </div>
+  </div>
+
+  <div class="ion-padding content-section">
+    <h2 class="section-title">Nuestra Pasión</h2>
+    <p>En Café Caracas nos dedicamos a ofrecer la experiencia más auténtica. Cada taza es preparada con granos seleccionados de las mejores fincas cafeteras, tostados a la perfección.</p>
+    
+    <ion-card class="product-card">
+      <img src="assets/images/cafe_product.png" alt="Latte Art & Croissant" />
+      <div class="card-gradient"></div>
+      <ion-card-header>
+        <ion-card-subtitle color="light">Especial de la Casa</ion-card-subtitle>
+        <ion-card-title color="light">Latte & Croissant Artesanal</ion-card-title>
+      </ion-card-header>
+    </ion-card>
+  </div>
+</ion-content>

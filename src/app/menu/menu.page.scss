@@ -1,0 +1,110 @@
+ion-content {
+  --background: linear-gradient(rgba(255, 248, 240, 0.65), rgba(255, 248, 240, 0.85)), url('../../assets/images/cafe_hero.png') no-repeat center center / cover;
+}
+
+.categories-scroll {
+  display: flex;
+  overflow-x: auto;
+  padding: 10px 0 20px;
+  -webkit-overflow-scrolling: touch;
+  scrollbar-width: none; /* Firefox */
+  &::-webkit-scrollbar {
+    display: none; /* Chrome/Safari/Opera */
+  }
+
+  .category-chip {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-width: 90px;
+    height: 90px;
+    margin-right: 15px;
+    background: #f4f5f8;
+    border-radius: 16px;
+    color: var(--ion-color-medium);
+    transition: all 0.3s ease;
+
+    ion-icon {
+      font-size: 2rem;
+      margin-bottom: 8px;
+    }
+
+    span {
+      font-size: 0.9rem;
+      font-weight: 500;
+    }
+
+    &.active {
+      background: var(--ion-color-tertiary);
+      color: white;
+      box-shadow: 0 4px 12px rgba(var(--ion-color-tertiary-rgb), 0.4);
+      transform: translateY(-5px);
+    }
+  }
+}
+
+.category-title {
+  font-size: 1.8rem;
+  font-weight: bold;
+  color: var(--ion-color-dark);
+  margin-top: 10px;
+  margin-bottom: 20px;
+}
+
+.menu-list {
+  background: transparent;
+
+  .menu-item {
+    --background: white;
+    --padding-start: 10px;
+    --inner-padding-end: 10px;
+    margin-bottom: 15px;
+    border-radius: 12px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+
+    ion-thumbnail {
+      width: 80px;
+      height: 80px;
+      margin: 10px 15px 10px 0;
+      
+      img {
+        border-radius: 8px;
+        object-fit: cover;
+      }
+    }
+
+    .item-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 5px;
+
+      h3 {
+        font-weight: bold;
+        font-size: 1.1rem;
+        color: var(--ion-color-dark);
+        margin: 0;
+      }
+
+      .price {
+        font-weight: bold;
+        color: var(--ion-color-tertiary);
+        font-size: 1.1rem;
+      }
+    }
+
+    p {
+      font-size: 0.95rem;
+      color: var(--ion-color-medium);
+      line-height: 1.4;
+      margin: 0;
+    }
+  }
+}
+
+.empty-state {
+  text-align: center;
+  padding: 40px 20px;
+  color: var(--ion-color-medium);
+}
